@@ -1,7 +1,7 @@
 import ThreeElephantsImg from "../../assets/images/hobbies/threeElephants.jpg";
 import BlackWomanImg from "../../assets/images/hobbies/blackWoman.jpg";
 import PotWomanImg from "../../assets/images/hobbies/potWoman.jpg";
-import ElephantImg from "../../assets/images/hobbies/elephant.jpg";
+import ElephantImg from "../../assets/images/hobbies/colorElephant.jpg";
 
 const Hobbies = () => {
   const paintings = [
