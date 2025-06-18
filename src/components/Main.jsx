@@ -131,7 +131,7 @@ export default function Main() {
       <Navbar scrollToSection={scrollToSection} activeSection={activeSection} />
 
       {/* Hero Section */}
-      <Hero />
+      <Hero scrollToSection={scrollToSection} />
 
       {/* About Section */}
       <section id="about" className="py-20 bg-white/5 backdrop-blur-sm">
@@ -423,12 +423,12 @@ export default function Main() {
                   I'm ready to take on challenging projects and deliver innovative solutions.
                 </p>
                 <div className="space-y-4">
-                  <a
+                  {/* <a
                     href="mailto:nlc.madhushanka@gmail.com"
                     className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-center py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105"
                   >
                     Send Email
-                  </a>
+                  </a> */}
                   <a
                     href="https://linkedin.com/in/chamara-madhushanka"
                     target="_blank"
