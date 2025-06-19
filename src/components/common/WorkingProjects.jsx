@@ -4,46 +4,58 @@ import HangryImg from "../../assets/images/hangry.jpg";
 import GritImg from "../../assets/images/grit.jpg";
 import PoruwaImg from "../../assets/images/poruwa.jpg";
 import SpritzerImg from "../../assets/images/spritzer.jpg";
+import SpritzerDashboardImg from "../../assets/images/spritzer-dashboard.jpg";
 import AdxlImg from "../../assets/images/adxl.jpg";
 
 const projects = [
   {
     name: "Hangry.sg",
-    description: "Developed independently as the first employee at Plutoplay",
+    description: "Developed independently as the first employee at ",
     type: "Food Delivery Platform",
+    company: "Plutopay AI Pte Ltd",
     image: HangryImg,
     link: "https://hangry.sg",
   },
   {
     name: "Grit",
     description:
-      "Led frontend development and worked as a Full-Stack Engineer at Eyepax",
+      "Led frontend development and worked as a Full-Stack Engineer at ",
     type: "Recruitment Platform",
+    company: "Eyepax IT Consulting Pvt Ltd",
     image: GritImg,
     link: "https://freshly.sg",
   },
   {
     name: "Poruwa.lk",
-    description:
-      "Developed the entire frontend as the first employee at Serendib Systems",
+    description: "Developed the entire frontend as the first employee at ",
     type: "Matrimony Platform",
+    company: "Serendib Systems Pty Ltd",
     image: PoruwaImg,
     link: "https://poruwa.lk",
   },
   {
     name: "Kahabath Gedara",
-    description:
-      "Developed the entire frontend as the first employee at Serendib Systems",
-    type: "Restaurant Platform",
+    description: "Developed the entire frontend as the first employee at ",
+    type: "360 Restaurant Management Platform",
+    company: "Serendib Systems Pty Ltd",
     image: SpritzerImg,
     link: "https://kahabathgedara.com",
   },
   {
     name: "Zari.ai",
-    description: "One of the projects I am currently working on at ADXL",
+    description: "One of the projects I am currently working on at ",
     type: "AI Platform",
+    company: "ADXL Pty Ltd",
     image: AdxlImg,
     link: "https://zari.ai",
+  },
+  {
+    name: "Spritzer Dashboard",
+    description: "Developed the entire frontend as the first employee at ",
+    type: "360 Restaurant Management Platform",
+    company: "Serendib Systems Pty Ltd",
+    image: SpritzerDashboardImg,
+    link: "https://dashboard.spritzer.app/",
   },
 ];
 
@@ -81,7 +93,7 @@ const ProjectCard = ({ project, index }) => {
           {project.name}
         </h3>
         <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-          {project.description}
+          {project.description} <b>{project.company}</b>.
         </p>
       </div>
     </article>
@@ -94,9 +106,6 @@ const WorkingProjects = ({ scrollToSection }) => {
       id="projects"
       className="min-h-screen flex items-center justify-center relative bg-white"
     >
-      {/* Background Effects */}
-      {/* <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Crect x=\"0\" y=\"0\" width=\"1\" height=\"1\" fill=\"%23E5E7EB\"/%3E%3C/svg%3E')] bg-repeat opacity-20"></div> */}
-
       {/* Floating Icons Animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 animate-float">
@@ -122,7 +131,7 @@ const WorkingProjects = ({ scrollToSection }) => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black">
-              Featured Projects
+              Few Company Projects
             </h2>
             <p className="mt-2 text-gray-600 text-base md:text-lg">
               Showcasing innovative solutions built with passion

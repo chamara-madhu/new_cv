@@ -1,17 +1,30 @@
 import React, { useState } from "react";
-import { Calendar, GraduationCap, Sparkles, ChevronDown, ChevronUp } from "lucide-react";
+import {
+  Calendar,
+  GraduationCap,
+  Sparkles,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 
-const education = [
+const universityEducation = [
   {
     degree: "MSc in Information Systems with Computing",
     institution: "Dublin Business School, Ireland",
     period: "Sep 2024 – Present",
     status: "In Progress",
     subjects: [
-      { name: "Database Systems", grade: "TBD" },
-      { name: "Cloud Computing", grade: "TBD" },
-      { name: "Software Engineering", grade: "TBD" },
-      { name: "Business Intelligence", grade: "TBD" },
+      { name: "Software Engineering", grade: "69" },
+      { name: "Advanced Databases", grade: "76" },
+      { name: "Networks and Systems Administration", grade: "84" },
+      { name: "Programming for Information Systems", grade: "83" },
+      { name: "Web and Mobile Technologies", grade: "80" },
+      { name: "Applied Research Methods", grade: "81" },
+      { name: "Enterprise Information Systems", grade: "83" },
+      { name: "Data Analytics and Visualization", grade: "80" },
+      { name: "Computer Systems Security", grade: "64" },
+      { name: "Web Development for Information Systems", grade: "89" },
+      { name: "Applied Research Project", grade: "To Do" },
     ],
   },
   {
@@ -20,10 +33,11 @@ const education = [
     period: "Oct 2024 – Present",
     status: "In Progress",
     subjects: [
-      { name: "Machine Learning", grade: "TBD" },
-      { name: "Data Visualization", grade: "TBD" },
-      { name: "Statistical Analysis", grade: "TBD" },
-      { name: "Big Data Technologies", grade: "TBD" },
+      { name: "Data Analytics and Visualization", grade: "A" },
+      { name: "Applied Data Programming", grade: "A" },
+      { name: "Databases and Data Management", grade: "Pending Results" },
+      { name: "Machine Learning and Deep Learning", grade: "Pending Results" },
+      { name: "Project Dissertation", grade: "To Do" },
     ],
   },
   {
@@ -32,10 +46,14 @@ const education = [
     period: "Sep 2024 – Oct 2025",
     status: "In Progress",
     subjects: [
-      { name: "Network Security", grade: "TBD" },
-      { name: "IT Project Management", grade: "TBD" },
-      { name: "Artificial Intelligence", grade: "TBD" },
-      { name: "Web Development", grade: "TBD" },
+      { name: "Technology Project Management", grade: "55" },
+      { name: "Team Software Development Project", grade: "73.25" },
+      { name: "Information Security and Document Management", grade: "68" },
+      { name: "Programming for Data Analysis", grade: "65" },
+      { name: "End User Computing Risk Management", grade: "70" },
+      { name: "Geospatial Analysis", grade: "52" },
+      { name: "Research Methods for Technology Dissertations", grade: "67" },
+      { name: "Technology Dissertation", grade: "To Do" },
     ],
   },
   {
@@ -44,10 +62,30 @@ const education = [
     period: "Jan 2017 – May 2020",
     gpa: "3.28 / 4.00",
     subjects: [
-      { name: "Algorithms", grade: "A-" },
-      { name: "Web Programming", grade: "B+" },
-      { name: "Database Management", grade: "A" },
-      { name: "Operating Systems", grade: "B" },
+      { name: "Communication Skills", grade: "P" },
+      { name: "Introductory Mathematics", grade: "P" },
+      { name: "Personal Computing", grade: "P" },
+      { name: "Information Systems & Technology", grade: "B" },
+      { name: "Computer Systems I", grade: "B+" },
+      { name: "Web Application Development I", grade: "C" },
+      { name: "Mathematics for Computing I", grade: "A-" },
+      { name: "Programming I", grade: "B-" },
+      { name: "Database Systems I", grade: "B-" },
+      { name: "Systems Analysis & Design", grade: "A" },
+      { name: "Object Oriented Analysis & Design", grade: "A" },
+      { name: "Fundamentals of Software Engineering", grade: "A-" },
+      { name: "Mathematics for Computing II", grade: "B-" },
+      { name: "Web Application Development II", grade: "B+" },
+      { name: "Information Technology Project Management", grade: "B-" },
+      { name: "Computer Networks", grade: "B" },
+      { name: "Fundamentals of Management", grade: "P" },
+      { name: "Introduction to Entrepreneurship", grade: "P" },
+      { name: "Professional Issues In IT", grade: "B+" },
+      { name: "Information Systems Security", grade: "A-" },
+      { name: "Fundamentals of Multimedia*", grade: "A-" },
+      { name: "e-Business Application*", grade: "B" },
+      { name: "Database Systems II", grade: "A-" },
+      { name: "Software Development Project", grade: "A" },
     ],
   },
   {
@@ -57,15 +95,109 @@ const education = [
     gpa: "3.39 / 4.00",
     subjects: [
       { name: "Financial Accounting", grade: "A" },
-      { name: "Management Accounting", grade: "B+" },
-      { name: "Auditing", grade: "A-" },
-      { name: "Business Law", grade: "B" },
+      { name: "Business Communication I", grade: "C" },
+      { name: "Introduction to Management", grade: "B+" },
+      { name: "Business Mathematics", grade: "A" },
+      { name: "Introduction to Information Technology I", grade: "B" },
+      { name: "Business Communication II", grade: "A-" },
+      { name: "Microeconomics", grade: "A-" },
+      { name: "Business Statistics", grade: "A" },
+      { name: "Political and Legal Environment", grade: "A" },
+      { name: "Introduction to Information Technology II", grade: "B+" },
+      { name: "Communication Skills and Personal Development", grade: "B" },
+      { name: "Advanced Financial Accounting", grade: "B" },
+      { name: "Macroeconomics", grade: "A" },
+      { name: "Human Resource Management", grade: "A-" },
+      { name: "Marketing Management", grade: "B+" },
+      { name: "Cost and Management Accounting", grade: "A" },
+      { name: "Computer Based Accounting", grade: "B+" },
+      { name: "Commercial Law", grade: "B-" },
+      { name: "Operations Management", grade: "B+" },
+      { name: "Financial Management", grade: "B+" },
+      { name: "Advanced Management Accounting", grade: "B" },
+      { name: "Accounting Modelling", grade: "A-" },
+      { name: "Accounting Information Systems", grade: "A" },
+      { name: "Corporate Law", grade: "A" },
+      { name: "Investment and Portfolio Management I", grade: "C-" },
+      { name: "Financial Reporting", grade: "B-" },
+      { name: "Auditing and Assurance", grade: "A-" },
+      { name: "Taxation", grade: "A" },
+      { name: "Skill Development of Intern Accountants II", grade: "B" },
+      { name: "Investment and Portfolio Management II", grade: "C+" },
+      { name: "Research Methodology", grade: "A" },
+      { name: "Skill Development of Intern Accountants III", grade: "A+" },
+      { name: "Advanced Taxation", grade: "A-" },
+      { name: "Strategic Management", grade: "B+" },
+      { name: "International Financial Management", grade: "B+" },
+      { name: "Advanced Accounting Theory", grade: "B+" },
+      { name: "Financial Statement Analysis", grade: "A-" },
+      { name: "Strategic Management Accounting", grade: "C+" },
+      { name: "Skill Development of Intern Accountants IV", grade: "A" },
+      {
+        name: "Artificial Neural Networks in Accounting and Finance",
+        grade: "B+",
+      },
     ],
   },
 ];
 
+const schoolEducation = [
+  {
+    degree: "GCE Advanced Level (A/L)",
+    institution: "D. S. Senanayake College, Sri Lanka",
+    period: "May 2010 – Aug 2012",
+    subjects: [
+      { name: "Accounting", grade: "A" },
+      { name: "Economics", grade: "A" },
+      { name: "Statistics", grade: "A" },
+      { name: "General English", grade: "B" },
+    ],
+    extra: "Island Rank: 119, District Rank: 55 (Colombo)",
+  },
+];
+
+const professionalEducation = [
+  {
+    degree: "Professional Graduate Diploma (PGD Level) – Following",
+    institution: "Chartered Institute for IT (BCS-UK)",
+    period: "2018 – 2018",
+    status: "Partially Completed",
+  },
+  {
+    degree: "Diploma in IT",
+    institution: "Chartered Institute for IT (BCS-UK)",
+    period: "2017",
+  },
+  {
+    degree: "Certificate in IT",
+    institution: "Chartered Institute for IT (BCS-UK)",
+    period: "2016",
+  },
+  {
+    degree: "Diploma in Banking and Finance",
+    institution: "Institute of Bankers of Sri Lanka (IBSL)",
+    period: "2014",
+  },
+  {
+    degree: "CAB-II Level",
+    institution: "Institute of Chartered Accountants of Sri Lanka (ICASL)",
+    period: "2013",
+  },
+  {
+    degree: "Certificate in Banking and Finance",
+    institution: "Institute of Bankers of Sri Lanka (IBSL)",
+    period: "2012",
+  },
+  {
+    degree: "AAT Passed Finalist",
+    institution:
+      "The Association of Accounting Technicians of Sri Lanka (AATSL)",
+    period: "2012",
+  },
+];
+
 const EducationCard = ({ edu, index }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(index === 0);
 
   return (
     <article
@@ -95,46 +227,71 @@ const EducationCard = ({ edu, index }) => {
             </div>
           )}
         </div>
-        <span className="mt-3 sm:mt-0 inline-block bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-medium group-hover:bg-blue-500/30 transition-all">
-          {edu.status || "Completed"}
+        <span
+          className={`mt-3 sm:mt-0 inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold shadow-sm backdrop-blur-sm transition-all duration-300
+    ${
+      edu.status === "In Progress"
+        ? "bg-yellow-400/10 text-yellow-300 border border-yellow-300/30 hover:bg-yellow-400/20"
+        : "bg-green-400/10 text-green-300 border border-green-300/30 hover:bg-green-400/20"
+    }
+  `}
+        >
+          {edu.status === "In Progress" ? (
+            <>
+              <Sparkles className="w-4 h-4 animate-pulse text-yellow-300" />
+              In Progress
+            </>
+          ) : (
+            <>
+              <GraduationCap className="w-4 h-4 text-green-300" />
+              Completed
+            </>
+          )}
         </span>
       </div>
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="flex items-center text-blue-300 hover:text-blue-200 text-sm font-medium mt-4 group"
+        className="flex items-center text-blue-300 hover:text-blue-200 text-sm font-medium mt-4 group cursor-pointer"
       >
         {isExpanded ? (
           <>
-            <ChevronUp className="mr-1 group-hover:scale-110 transition-transform" size={16} />
+            <ChevronUp
+              className="mr-1 group-hover:scale-110 transition-transform"
+              size={16}
+            />
             Hide Details
           </>
         ) : (
           <>
-            <ChevronDown className="mr-1 group-hover:scale-110 transition-transform" size={16} />
+            <ChevronDown
+              className="mr-1 group-hover:scale-110 transition-transform"
+              size={16}
+            />
             See More
           </>
         )}
       </button>
       {isExpanded && (
-        <div className="mt-4">
-          <h4 className="text-white font-semibold mb-2">Subjects & Grades</h4>
-          <ul className="space-y-2">
+        <div className="bg-purple-50 rounded-xl p-4 sm:p-6 mt-4">
+          <h4 className="font-semibold mb-3">Subjects & Grades</h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
             {edu.subjects.map((subject, subIndex) => (
-              <li key={subIndex} className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0 group-hover:bg-purple-400 transition-colors"></span>
-                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                  {subject.name}: {subject.grade}
-                </p>
-              </li>
+              <div
+                key={subIndex}
+                className="flex flex-row justify-between text-sm"
+              >
+                <span>{subject.name}</span>
+                <span className="text-sm font-semibold">{subject.grade}</span>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       )}
     </article>
   );
 };
 
-const Education = ({ scrollToSection }) => {
+const Education = () => {
   return (
     <section
       id="education"
@@ -151,10 +308,16 @@ const Education = ({ scrollToSection }) => {
         <div className="absolute top-1/4 left-1/4 animate-float">
           <GraduationCap className="text-blue-400/30" size={24} />
         </div>
-        <div className="absolute top-1/3 right-1/4 animate-bounce" style={{ animationDelay: "1s" }}>
+        <div
+          className="absolute top-1/3 right-1/4 animate-bounce"
+          style={{ animationDelay: "1s" }}
+        >
           <Sparkles className="text-yellow-400/30" size={20} />
         </div>
-        <div className="absolute bottom-1/4 left-1/3 animate-pulse" style={{ animationDelay: "2s" }}>
+        <div
+          className="absolute bottom-1/4 left-1/3 animate-pulse"
+          style={{ animationDelay: "2s" }}
+        >
           <Calendar className="text-purple-400/30" size={22} />
         </div>
       </div>
@@ -171,47 +334,141 @@ const Education = ({ scrollToSection }) => {
             <p className="mt-2 text-gray-300 text-base md:text-lg">
               Academic qualifications in technology and business
             </p>
-            {/* <p className="mt-1 text-xs text-gray-400">
-              Institution logos are used for identification purposes only and do not imply endorsement.
-            </p> */}
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-4"></div>
           </div>
 
-          {/* Education Cards */}
-          <div className="space-y-6">
-            {education.map((edu, index) => (
-              <EducationCard key={index} edu={edu} index={index} />
-            ))}
-          </div>
-
-          {/* Call to Action */}
-          {/* <div className="text-center mt-12">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 max-w-2xl mx-auto">
-              <p className="text-gray-400 text-sm mb-2 flex items-center justify-center">
-                <Sparkles className="mr-2 text-yellow-400" size={16} />
-                Lifelong Learner
-              </p>
-              <p className="text-gray-300 text-base">
-                Let's connect to discuss how my skills can drive your projects!
-              </p>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="mt-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg text-base flex items-center mx-auto group"
-              >
-                <Sparkles className="mr-2 group-hover:scale-110 transition-transform" size={18} />
-                Get In Touch
-              </button>
+          {/* Education Sections */}
+          <div className="space-y-12">
+            {/* University */}
+            <div>
+              <h3 className="text-3xl font-bold text-white mb-6 border-b border-white/20 pb-2">
+                University Education
+              </h3>
+              <div className="space-y-6">
+                {universityEducation.map((edu, index) => (
+                  <EducationCard key={index} edu={edu} index={index} />
+                ))}
+              </div>
             </div>
-          </div> */}
+            {/* Professional */}
+            <div>
+              <h3 className="text-3xl font-bold text-white mb-6 border-b border-white/20 pb-2">
+                Professional Qualifications
+              </h3>
+              <div className="grid gap-6">
+                {professionalEducation.map((item, index) => (
+                  <article
+                    key={index}
+                    className="flex justify-between bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105"
+                  >
+                    <div>
+                      <h4 className="text-lg font-semibold text-white bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
+                        {item.degree}
+                      </h4>
+                      <p className="text-gray-300 mt-1">{item.institution}</p>
+                      <p className="text-gray-400 text-sm">{item.period}</p>
+                    </div>
+                    <div>
+                      <span
+                        className={`mt-3 sm:mt-0 inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold shadow-sm backdrop-blur-sm transition-all duration-300
+    ${
+      item.status === "In Progress"
+        ? "bg-yellow-400/10 text-yellow-300 border border-yellow-300/30 hover:bg-yellow-400/20"
+        : "bg-green-400/10 text-green-300 border border-green-300/30 hover:bg-green-400/20"
+    }
+  `}
+                      >
+                        {item.status === "In Progress" ? (
+                          <>
+                            <Sparkles className="w-4 h-4 animate-pulse text-yellow-300" />
+                            In Progress
+                          </>
+                        ) : item.status === "Partially Completed" ? (
+                          <>
+                            <GraduationCap className="w-4 h-4 text-green-300" />
+                            Partially Completed
+                          </>
+                        ) : (
+                          <>
+                            <GraduationCap className="w-4 h-4 text-green-300" />
+                            Completed
+                          </>
+                        )}
+                      </span>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            {/* School */}
+            <div>
+              <h3 className="text-3xl font-bold text-white mb-6 border-b border-white/20 pb-2">
+                School Education
+              </h3>
+              {schoolEducation.map((edu, index) => (
+                <article
+                  key={index}
+                  className="flex justify-between bg-white/10 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-white/20 hover:border-blue-400/60 transition-all duration-300 hover:scale-105 group"
+                >
+                  <div>
+                    <h4 className="text-xl sm:text-2xl font-semibold text-white bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent">
+                      {edu.degree}
+                    </h4>
+                    <p className="text-gray-300 mt-2">{edu.institution}</p>
+                    <p className="text-gray-400 text-sm mt-1">{edu.period}</p>
+                    <p className="text-white text-sm mt-5 italic">{edu.extra}</p>
+                    <ul className="mt-4 space-y-2">
+                      {edu.subjects.map((subject, i) => (
+                        <li key={i} className="text-sm text-gray-300">
+                          • {subject.name}: {subject.grade}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <span
+                      className={`mt-3 sm:mt-0 inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold shadow-sm backdrop-blur-sm transition-all duration-300
+    ${
+      edu.status === "In Progress"
+        ? "bg-yellow-400/10 text-yellow-300 border border-yellow-300/30 hover:bg-yellow-400/20"
+        : "bg-green-400/10 text-green-300 border border-green-300/30 hover:bg-green-400/20"
+    }
+  `}
+                    >
+                      {edu.status === "In Progress" ? (
+                        <>
+                          <Sparkles className="w-4 h-4 animate-pulse text-yellow-300" />
+                          In Progress
+                        </>
+                      ) : (
+                        <>
+                          <GraduationCap className="w-4 h-4 text-green-300" />
+                          Completed
+                        </>
+                      )}
+                    </span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
         }
-        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
       `}</style>
     </section>
   );
