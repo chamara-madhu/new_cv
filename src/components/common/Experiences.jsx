@@ -5,7 +5,7 @@ const workExperience = [
   {
     title: "Senior Software Engineer (Full Stack)",
     company: "ADXL Pty Ltd – Australia",
-    period: "June 2024 – August 2024 and January 2025 – May (9 months)",
+    period: "June 2024 – August 2024 and January 2025 – May 2025 (9 months)",
     type: "Full-time, Remote",
     achievements: [
       "Designed and implemented three complex software solutions in a global remote environment.",
@@ -14,7 +14,7 @@ const workExperience = [
     ],
   },
   {
-    title: "Lead Engineer (Full Stack, DevOps, R&D)",
+    title: "Sole Engineer (Full Stack, DevOps, R&D)",
     company: "PlutoPay AI Pte Ltd – Singapore",
     period: "October 2023 – March 2024 (6 months)",
     type: "Full-time, Remote",
@@ -27,7 +27,7 @@ const workExperience = [
   {
     title: "Software Engineer (Full Stack)",
     company: "Eyepax IT Consulting Pvt Ltd – Sri Lanka",
-    period: "July 2021 – August 2023 (2 years, 3 months)",
+    period: "July 2021 – August 2023 (2 years, 2 months)",
     type: "Full-time, Hybrid",
     achievements: [
       "Developed and delivered two major projects: a leasing application and a recruitment platform.",
@@ -45,7 +45,48 @@ const workExperience = [
       "Led front-end development using React, SASS, and Material UI, delivering user-friendly solutions.",
     ],
   },
+  {
+    title: "Software Engineer (Front-End)",
+    company: "Serendib Systems Pty Ltd – Australia",
+    period: "May 2020 – April 2021 (1 year)",
+    type: "Full-time, Remote",
+    achievements: [
+      "Contributed to multiple projects, designing and implementing responsive front-end features.",
+      "Utilized modern tools and technologies to deliver engaging user interfaces.",
+    ],
+  },
+  {
+    title: "Associate Software Engineer (Front-End)",
+    company: "Serendib Systems Pty Ltd – Australia",
+    period: "December 2019 – April 2020 (5 months)",
+    type: "Full-time, Remote",
+    achievements: [
+      "Built foundational front-end systems for 3+ projects, including React, Redux, and SASS implementations.",
+      "Contributed to high-quality project delivery and team success.",
+    ],
+  },
+  {
+    title: "Web Developer (Front-End)",
+    company: "The Future Net USA Pvt Ltd – Sri Lanka",
+    period: "May 2019 – November 2019 (7 months)",
+    type: "Full-time",
+    achievements: [
+      "Developed and maintained web application features, including an aircraft selling platform and admin panel.",
+      "Resolved bugs and improved user experience.",
+    ],
+  },
+  {
+    title: "Trainee Web Developer (Front-End)",
+    company: "The Future Net USA Pvt Ltd – Sri Lanka",
+    period: "February 2019 – April 2019 (3 months)",
+    type: "Internship",
+    achievements: [
+      "Built two web applications from scratch using HTML, CSS, JavaScript, and Bootstrap.",
+      "Acquired foundational development skills while contributing to project planning and execution.",
+    ],
+  },
 ];
+
 
 const ExperienceCard = ({ job, index }) => {
   return (

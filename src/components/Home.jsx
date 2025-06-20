@@ -7,6 +7,7 @@ import Skills from "./common/Skills";
 import WorkingProjects from "./common/WorkingProjects";
 import IndividualProjects from "./common/IndividualProjects";
 import Hobbies from "./common/Hobbies";
+import ProfessionalSummary from "./common/ProfessionalSummary";
 
 const Home = () => {
     const scrollToSection = (sectionId) => {
@@ -36,6 +37,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <Hero  scrollToSection={scrollToSection}  />
+      <ProfessionalSummary />
       <Skills />
       <Experiences />
       <WorkingProjects />
