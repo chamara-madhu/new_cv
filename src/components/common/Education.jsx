@@ -35,8 +35,8 @@ const universityEducation = [
     subjects: [
       { name: "Data Analytics and Visualization", grade: "A" },
       { name: "Applied Data Programming", grade: "A" },
-      { name: "Databases and Data Management", grade: "Pending Results" },
-      { name: "Machine Learning and Deep Learning", grade: "Pending Results" },
+      { name: "Databases and Data Management", grade: "B-" },
+      { name: "Machine Learning and Deep Learning", grade: "A" },
       { name: "Project Dissertation", grade: "To Do" },
     ],
   },
@@ -417,7 +417,9 @@ const Education = () => {
                     </h4>
                     <p className="text-gray-300 mt-2">{edu.institution}</p>
                     <p className="text-gray-400 text-sm mt-1">{edu.period}</p>
-                    <p className="text-white text-sm mt-5 italic">{edu.extra}</p>
+                    <p className="text-white text-sm mt-5 italic">
+                      {edu.extra}
+                    </p>
                     <ul className="mt-4 space-y-2">
                       {edu.subjects.map((subject, i) => (
                         <li key={i} className="text-sm text-gray-300">

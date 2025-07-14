@@ -12,6 +12,8 @@ const workExperience = [
       "Led feature development and performance optimization, delivering scalable and innovative applications.",
       "Collaborated with cross-functional teams to meet stringent deadlines and business objectives.",
     ],
+    techStack:
+      "HTML5, CSS3, JavaScript (ES6+), TypeScript, React, Vite, Node with NestJS, Tailwind CSS, Redux toolkit, MySQL, MongoDB, Elastic Search, Redis, AWS, Open AI, Digital Marketing APIs (facebook, Instagram, LiknedIn, Google, etc) Docker, Git, GitHub, GitHub Actions, Figma, etc.",
   },
   {
     title: "Sole Engineer (Full Stack, DevOps, R&D)",
@@ -23,6 +25,8 @@ const workExperience = [
       "Conducted R&D to develop cost-effective AI-driven solutions, contributing to company growth.",
       "Established best practices for code quality, scalability, and system maintenance.",
     ],
+    techStack:
+      "HTML5, CSS3, JavaScript (ES6+), TypeScript, React with Next.js, Node with NestJS, TailwindCSS, Redux toolkit, D3.js, PostgreSQL, AWS (Lambda, S3, SQS, API Gateway, Route 53, RDS, Amplify, CloudWatch, etc.), Open AI, Git, GitHub, GitHub Actions, Figma, etc.",
   },
   {
     title: "Software Engineer (Full Stack)",
@@ -34,6 +38,8 @@ const workExperience = [
       "Collaborated with multidisciplinary teams to deliver high-quality software solutions.",
       "Managed overseas client relationships and project lifecycles, ensuring timely delivery.",
     ],
+    techStack:
+      "HTML5, CSS3, JavaScript (ES6+), TypeScript, React, Node, Material UI, Redux, MongoDB, AWS (EC2, S3, SNS, SQS, DynamoDB, Elastic Search, Route 53, Amplify, CloudWatch, etc.), Open AI, Git, Twilio, Bitbucket, GitHub Actions, Figma, Sovren API, Proxy Curl, Cloud convert API, Nivo charts, google charts, Python, Flask REST API, Flask-mail, Selenium, Chrome web driver, Beautifulsoup, Pandas, Netlify for react app deployment, etc.",
   },
   {
     title: "Senior Software Engineer (Front-End)",
@@ -44,6 +50,8 @@ const workExperience = [
       "Delivered over five projects, including a matrimony site, a restaurant 360 application, admin dashboards, and photo stack applications.",
       "Led front-end development using React, SASS, and Material UI, delivering user-friendly solutions.",
     ],
+    techStack:
+      " HTML5, CSS3, JavaScript (ES6+), TypeScript, React, redux, SaaS, React-Redux, Redux-Thunk, Material UI, Bootstrap, MongoDB, payment gateway integrations (Stripe, PayHere), real-time chat using web-socket, Figma, GitLab, etc.",
   },
   {
     title: "Software Engineer (Front-End)",
@@ -74,6 +82,8 @@ const workExperience = [
       "Developed and maintained web application features, including an aircraft selling platform and admin panel.",
       "Resolved bugs and improved user experience.",
     ],
+    techStack:
+      "HTML, CSS, JavaScript, jQuery, SaaS, Bootstrap, React, Node, MongoDB, Express, etc.",
   },
   {
     title: "Trainee Web Developer (Front-End)",
@@ -84,9 +94,9 @@ const workExperience = [
       "Built two web applications from scratch using HTML, CSS, JavaScript, and Bootstrap.",
       "Acquired foundational development skills while contributing to project planning and execution.",
     ],
+    techStack: "HTML, CSS, JavaScript, jQuery, SaaS, Bootstrap, etc.",
   },
 ];
-
 
 const ExperienceCard = ({ job, index }) => {
   return (
@@ -125,6 +135,11 @@ const ExperienceCard = ({ job, index }) => {
           </li>
         ))}
       </ul>
+      {job?.techStack ? (
+        <p className="text-gray-200 mt-4 text-sm">
+          <b>Tech Stack:</b> {job.techStack}
+        </p>
+      ) : null}
     </article>
   );
 };
@@ -146,10 +161,16 @@ const Experiences = ({ scrollToSection }) => {
         <div className="absolute top-1/4 left-1/4 animate-float">
           <Award className="text-blue-400/30" size={24} />
         </div>
-        <div className="absolute top-1/3 right-1/4 animate-bounce" style={{ animationDelay: "1s" }}>
+        <div
+          className="absolute top-1/3 right-1/4 animate-bounce"
+          style={{ animationDelay: "1s" }}
+        >
           <Sparkles className="text-yellow-400/30" size={20} />
         </div>
-        <div className="absolute bottom-1/4 left-1/3 animate-pulse" style={{ animationDelay: "2s" }}>
+        <div
+          className="absolute bottom-1/4 left-1/3 animate-pulse"
+          style={{ animationDelay: "2s" }}
+        >
           <Calendar className="text-purple-400/30" size={22} />
         </div>
       </div>
@@ -203,10 +224,17 @@ const Experiences = ({ scrollToSection }) => {
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
         }
-        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
       `}</style>
     </section>
   );
