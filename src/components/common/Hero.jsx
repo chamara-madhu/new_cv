@@ -204,8 +204,8 @@ const Hero = ({scrollToSection}) => {
                     </div>
                     <h4 className="text-white font-semibold mb-2">Location</h4>
                     <div className="text-purple-300 text-sm space-y-1">
-                      <p>647 Chestnut Cl Elm Park</p>
-                      <p>Limerick, V94 P9TP</p>
+                      <p>72 Ceol Na habhainn, Caherconlish, Pallasgreen,</p>
+                      <p>Limerick, V94 NC0E</p>
                       <p className="text-purple-200 font-medium">Ireland</p>
                     </div>
                   </div>

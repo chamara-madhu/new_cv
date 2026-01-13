@@ -3,6 +3,22 @@ import { Calendar, Award, Sparkles } from "lucide-react";
 
 const workExperience = [
   {
+    title: "Founder & Software Engineer",
+    company: "MCQ Lokka – Sri Lanka",
+    period: "October 2025 – Present",
+    type: "Self-employed, Remote (Personal Project)",
+    achievements: [
+      "Designed and developed an end-to-end online MCQ practice platform for Sri Lankan O/L and A/L students (www.mcqlokka.com).",
+      "Built a scalable, mobile-friendly full-stack architecture covering frontend, backend, database, and hosting.",
+      "Implemented exam mode, learning mode, real-time progress analytics, and performance tracking features.",
+      "Structured and managed a large-scale MCQ dataset with 10,000+ questions, 150+ past papers, and 20+ subjects.",
+      "Deployed and maintained production infrastructure with a strong focus on performance, scalability, and security.",
+      "Owned the complete software lifecycle from system design and development to deployment and continuous iteration.",
+    ],
+    techStack:
+      "HTML5, CSS3, JavaScript (ES6+), TypeScript, React with Vite, Node.js with Express, Tailwind CSS, Redux Toolkit, MongoDB, AWS (S3, CloudFront, Route 53, Domain Registry, SES), OpenAI, Git, GitHub, SEO Optimization, Google Analytics, Netlify, Railway.com, Canva",
+  },
+  {
     title: "Senior Software Engineer (Full Stack)",
     company: "ADXL Pty Ltd – Australia",
     period: "June 2024 – August 2024 and January 2025 – May 2025 (9 months)",

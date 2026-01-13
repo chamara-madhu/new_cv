@@ -12,7 +12,8 @@ const universityEducation = [
     degree: "MSc in Information Systems with Computing",
     institution: "Dublin Business School, Ireland",
     period: "Sep 2024 – Present",
-    status: "In Progress",
+    status: "Completed",
+    grade: "First Class",
     subjects: [
       { name: "Software Engineering", grade: "69" },
       { name: "Advanced Databases", grade: "76" },
@@ -24,27 +25,29 @@ const universityEducation = [
       { name: "Data Analytics and Visualization", grade: "80" },
       { name: "Computer Systems Security", grade: "64" },
       { name: "Web Development for Information Systems", grade: "89" },
-      { name: "Applied Research Project", grade: "To Do" },
+      { name: "Applied Research Project", grade: "51" },
     ],
   },
   {
     degree: "MSc in Data Science",
     institution: "Kingston University, UK",
     period: "Oct 2024 – Present",
-    status: "In Progress",
+    status: "Completed",
+    grade: "Distinction",
     subjects: [
       { name: "Data Analytics and Visualization", grade: "A" },
       { name: "Applied Data Programming", grade: "A" },
       { name: "Databases and Data Management", grade: "B-" },
       { name: "Machine Learning and Deep Learning", grade: "A" },
-      { name: "Project Dissertation", grade: "To Do" },
+      { name: "Project Dissertation", grade: "71" },
     ],
   },
   {
     degree: "MSc in IT",
     institution: "Cardiff Metropolitan University, UK",
     period: "Sep 2024 – Oct 2025",
-    status: "In Progress",
+    status: "Completed",
+    grade: "Merit",
     subjects: [
       { name: "Technology Project Management", grade: "55" },
       { name: "Team Software Development Project", grade: "73.25" },
@@ -53,7 +56,7 @@ const universityEducation = [
       { name: "End User Computing Risk Management", grade: "70" },
       { name: "Geospatial Analysis", grade: "52" },
       { name: "Research Methods for Technology Dissertations", grade: "67" },
-      { name: "Technology Dissertation", grade: "To Do" },
+      { name: "Technology Dissertation", grade: "51" },
     ],
   },
   {
@@ -221,9 +224,15 @@ const EducationCard = ({ edu, index }) => {
             <span>{edu.period}</span>
           </div>
           {edu.gpa && (
-            <div className="flex items-center mt-1 text-gray-400">
+            <div className="flex text-sm items-center mt-1 text-gray-400">
               <Sparkles className="text-yellow-400 mr-2" size={18} />
               <span>GPA: {edu.gpa}</span>
+            </div>
+          )}
+          {edu.grade && (
+            <div className="flex text-sm items-center mt-1 text-gray-400">
+              <Sparkles className="text-yellow-400 mr-2" size={18} />
+              <span>{edu.grade}</span>
             </div>
           )}
         </div>
@@ -362,7 +371,7 @@ const Education = () => {
                     className="flex justify-between bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105"
                   >
                     <div>
-                      <h4 className="text-lg font-semibold text-white bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
+                      <h4 className="text-lg font-semibold text-white bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text">
                         {item.degree}
                       </h4>
                       <p className="text-gray-300 mt-1">{item.institution}</p>
