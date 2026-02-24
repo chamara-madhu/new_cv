@@ -3,7 +3,7 @@ import { Calendar, Award, Sparkles } from "lucide-react";
 
 const workExperience = [
   {
-    title: "Founder & Software Engineer",
+    title: "Founder & Sole Developer",
     company: "MCQ Lokka – Sri Lanka",
     period: "October 2025 – Present",
     type: "Self-employed, Remote (Personal Project)",
@@ -19,7 +19,7 @@ const workExperience = [
       "HTML5, CSS3, JavaScript (ES6+), TypeScript, React with Vite, Node.js with Express, Tailwind CSS, Redux Toolkit, MongoDB, AWS (S3, CloudFront, Route 53, Domain Registry, SES), OpenAI, Git, GitHub, SEO Optimization, Google Analytics, Netlify, Railway.com, Canva",
   },
   {
-    title: "Senior Software Engineer (Full Stack)",
+    title: "Associate Technical Lead (Full Stack)",
     company: "ADXL Pty Ltd – Australia",
     period: "June 2024 – August 2024 and January 2025 – May 2025 (9 months)",
     type: "Full-time, Remote",
@@ -45,7 +45,7 @@ const workExperience = [
       "HTML5, CSS3, JavaScript (ES6+), TypeScript, React with Next.js, Node with NestJS, TailwindCSS, Redux toolkit, D3.js, PostgreSQL, AWS (Lambda, S3, SQS, API Gateway, Route 53, RDS, Amplify, CloudWatch, etc.), Open AI, Git, GitHub, GitHub Actions, Figma, etc.",
   },
   {
-    title: "Software Engineer (Full Stack)",
+    title: "Senior Software Engineer (Full Stack)",
     company: "Eyepax IT Consulting Pvt Ltd – Sri Lanka",
     period: "July 2021 – August 2023 (2 years, 2 months)",
     type: "Full-time, Hybrid",
